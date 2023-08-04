@@ -13,13 +13,14 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
 
 @Composable
-fun PerfilScreen(navController: NavController) {
+fun PerfilScreen(navController: NavController, nome: String, idade:String) {
     Column (
         modifier = Modifier
             .fillMaxSize()
             .background(Color.Green))
     {
-        Text(text = "Perfil")
+//        enterpolaçao - imprimir o conteudo da variavel mesmo estando dentro das aspas
+        Text(text = "Perfil - $nome - $idade")
         Button(onClick = {  navController.navigate("menu")}) {
             Text(text = "Voltar")
         }
